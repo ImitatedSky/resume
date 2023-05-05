@@ -53,7 +53,7 @@ export default function Header() {
         <div>
           關於我們<a href="https://ex.com"></a>
         </div>
-        <div>這些是作什麼</div>
+        <div>Email</div>
       </nav>
       <div></div>
     </>
