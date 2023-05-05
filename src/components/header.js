@@ -1,16 +1,37 @@
 import { useState, useEffect } from "react";
-import "../styles.css";
+import "../style/nav.css";
 
 export default function Header() {
-  const [isTransparent, setIsTransparent] = useState(true);
-  const scrollThreshold = 100; // 滾動閾值
+  const [scrollDownBool, setScrollDownBool] = useState(false);
+  let lastScrollTop = 0;
+  let downScrollCount = 0;
+  let upScrollCount = 0;
 
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > scrollThreshold) {
-        setIsTransparent(false);
-      } else {
-        setIsTransparent(true);
+      const currentScroll =
+        window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        // 向下滾動
+        downScrollCount++;
+        upScrollCount = 0;
+      } else if (currentScroll < lastScrollTop) {
+        // 向上滾動
+        upScrollCount++;
+        downScrollCount = 0;
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // 防止無限滾動
+
+      if (downScrollCount >= 50) {
+        console.log("連續向下滾動超過50次");
+        downScrollCount = 0;
+        setScrollDownBool(true);
+      }
+
+      if (upScrollCount >= 25 || currentScroll == 0) {
+        console.log("連續向上滾動超過25次");
+        upScrollCount = 0;
+        setScrollDownBool(false);
       }
     }
 
@@ -21,28 +42,20 @@ export default function Header() {
     };
   }, []);
 
+  const navStyle = {
+    opacity: scrollDownBool ? 0.2 : 1,
+  };
+
   return (
-    <div
-      className="Header"
-      style={{
-        backgroundColor: isTransparent ? "transparent" : "#666",
-        opacity: isTransparent ? 0.7 : 1,
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        padding: "15px",
-        textAlign: "center",
-        fontSize: "35px",
-        color: "white",
-        display: "flex",
-        justifyContent: "space-between",
-        zIndex: 9999
-      }}
-    >
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
+    <>
+      <nav className="Header" style={navStyle}>
+        <div>1333</div>
+        <div>
+          關於我們<a href="https://ex.com"></a>
+        </div>
+        <div>這些是作什麼</div>
+      </nav>
+      <div></div>
+    </>
   );
 }
