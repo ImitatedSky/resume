@@ -3,7 +3,6 @@
   text-align: center;
 }
 
-
 .Footer {
   left: 0; /* 將 Header 元素的左邊固定在頁面左邊 */
   right: 0; /* 將 Header 元素的右邊固定在頁面右邊 */
@@ -13,4 +12,7 @@
   color: white;
   display: flex; /* 設置 display 為 flex */
   flex-direction: row; /* 設置主軸方向為橫向排列 */
+}
+body {
+  background-color: #082567;
 }
