@@ -1,34 +1,49 @@
 .Header {
+  font-family: "Brush Script MT", "Brush Script Std", "cursive", 標楷體, serif;
   position: sticky; /* 將 Header 元素設置為固定定位 */
   top: 0; /* 將 Header 元素的頂部固定在頁面頂部 */
   left: 0; /* 將 Header 元素的左邊固定在頁面左邊 */
   right: 0; /*將 Header 元素的右邊固定在頁面右邊*/
-  padding: 15px;
+  padding: 12px;
   text-align: center;
-  font-size: 35px;
+  font-size: 24px;
 
   justify-content: space-between; /* 將子元素均勻分佈 */
   display: flex; /* 設置 display 為 flex */
-  flex-direction: row; /* 設置主軸方向為橫向排列 */  
-  
+  flex-direction: row; /* 設置主軸方向為橫向排列 */
+
+  align-items: center;
+
   transition: opacity 0.76s;
+}
+.Header:hover {
+  opacity: 1 !important;
+}
+
+.Header > div {
+  border: none;
+  border: 1px solid #a1cbe0;
+  border-radius: 50%;
+  background-color: #c3e6f9;
+
+  border-radius: 10px;
+  padding: 6px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 1px;
+
+  mix-blend-mode: difference; /*字體顏色相反*/
 }
 .Header > div:first-child {
   margin-right: auto; /* 將第一個子元素靠左 */
 }
-.Header > div {
-  border: none;
-  border-radius: 50%;
-  background: burlywood;
-
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 10px;
-
-  margin: 1px;
-  font-size: 30px;
-  mix-blend-mode: difference; /*字體顏色相反*/
-}
 .Header > div:hover {
   background: burlywood + #000;
+  opacity: 1 !important;
+  font-size: 30px;
+}
+
+.navOpa {
+  opacity: 0.2;
 }
