@@ -33,3 +33,11 @@ export default function Contact() {
     </>
   );
 }
+
+export function Contact_onepage() {
+  return (
+    <>
+      <h1>Contact Me</h1>
+    </>
+  );
+}
