@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -8,7 +6,7 @@
 .Footer {
   left: 0; /* 將 Header 元素的左邊固定在頁面左邊 */
   right: 0; /* 將 Header 元素的右邊固定在頁面右邊 */
-  background-color: #777;
+  background-color: #222;
   padding: 10px;
   text-align: center;
   color: white;
