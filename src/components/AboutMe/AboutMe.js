@@ -1,5 +1,9 @@
-const AboutMe = () => {
-  return <h1>About Me</h1>;
-};
+import { Row, Col } from "reactstrap";
 
-export default AboutMe;
+export default function AboutMe() {
+  return (
+    <>
+      <h1>About Me</h1>
+    </>
+  );
+}
