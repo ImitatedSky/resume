@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -14,5 +16,20 @@
   flex-direction: row; /* 設置主軸方向為橫向排列 */
 }
 body {
-  background-color: #082567;
+  background-color: #2f4f4f;
+}
+
+.contact {
+  /* flex-direction: row; */
+  display: table-cell;
+  color: #e9ecef;
+}
+
+.contact > .row {
+  display: -webkit-flex;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 1rem;
+  line-height: 1.5;
+  /* text-align: left; */
 }
