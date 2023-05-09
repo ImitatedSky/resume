@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Route, useHistory, NavLink } from "react-router-dom";
 import "../style/nav.css";
 
 export default function Header() {
@@ -46,19 +47,20 @@ export default function Header() {
     };
   }, []);
 
+  let history = useHistory();
+  const handleClick = (prop) => {
+    history.push(prop);
+    console.log(prop);
+  };
   return (
     <>
-      <nav
-        className={hclassName}
-        // style={navStyle}
-      >
-        <div>Home</div>
-        <div>AboutMe</div>
-        <div>Experience</div>
-        <div>Project</div>
-        <div>Contact</div>
+      <nav className={hclassName}>
+        <div onClick={() => handleClick("/")}>Home</div>
+        <div onClick={() => handleClick("/AboutMe")}>AboutMe</div>
+        <div onClick={() => handleClick("/Experience")}>Experience</div>
+        <div onClick={() => handleClick("/Project")}>Project</div>
+        <div onClick={() => handleClick("/Contact")}>Contact</div>
       </nav>
-      <div></div>
     </>
   );
 }
