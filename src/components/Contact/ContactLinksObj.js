@@ -21,5 +21,5 @@ export const LinksObj = [
     icon: "./icons/104.png",
   },
 ];
-
+export const profile = [{ email: "yehforlivelihood", phone: "+886923923927" }];
 export const Links = [];
