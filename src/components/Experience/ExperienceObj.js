@@ -20,3 +20,5 @@ export const Experience = [
     Position: "補教老師",
   },
 ];
+
+export const Experience_en = [];

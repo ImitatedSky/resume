@@ -27,6 +27,12 @@ export default function Contact() {
   return (
     <>
       <h1>Contact Me</h1>
+      <div>
+        <p>{Links.profile[0]["name"]}</p>
+        <p>{Links.profile[0]["name_en"]}</p>
+        <p>{Links.profile[0]["email"]}</p>
+        <p>{Links.profile[0]["phone"]}</p>
+      </div>
       <div className="contact">
         {Links.LinksObj.map((x) => renderAboutFromObj(x))}
       </div>
