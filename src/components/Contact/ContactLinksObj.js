@@ -21,5 +21,12 @@ export const LinksObj = [
     icon: "./icons/104.png",
   },
 ];
-export const profile = [{ email: "yehforlivelihood", phone: "+886923923927" }];
+export const profile = [
+  {
+    name: "葉柏鈞",
+    name_en: "Po-Chun,Yeh",
+    email: "yehforlivelihood@gmail.com",
+    phone: "+886923923927",
+  },
+];
 export const Links = [];
