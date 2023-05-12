@@ -2,6 +2,15 @@ import * as Links from "./ContactLinksObj";
 import { Row, Col } from "reactstrap";
 
 export default function Contact() {
+  const values = Object.values(Links.profile[0]);
+
+  const profile = () => {
+    const profileElements = values.map((value, index) => (
+      <p key={index}>{value}</p>
+    ));
+    return profileElements;
+  };
+
   const renderAboutFromObj = (obj) => {
     return (
       <Row>
@@ -24,17 +33,19 @@ export default function Contact() {
       </Row>
     );
   };
+
   return (
     <>
       <h1>Contact Me</h1>
       <div>
-        <p>{Links.profile[0]["name"]}</p>
+        {/* <p>{Links.profile[0]["name"]}</p>
         <p>{Links.profile[0]["name_en"]}</p>
         <p>{Links.profile[0]["email"]}</p>
-        <p>{Links.profile[0]["phone"]}</p>
+        <p>{Links.profile[0]["phone"]}</p> */}
+        {profile()}
       </div>
       <div className="contact">
-        {Links.LinksObj.map((x) => renderAboutFromObj(x))}
+        {Links.ReferenceLinks.map((x) => renderAboutFromObj(x))}
       </div>
     </>
   );
