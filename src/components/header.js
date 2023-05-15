@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Route, useHistory, NavLink } from "react-router-dom";
 import "../style/nav.css";
+
+import LanguageContext from "./LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   let Header = "Header";
@@ -58,6 +61,7 @@ export default function Header() {
         <div onClick={() => handleClick("/")}>Home</div>
         <div onClick={() => handleClick("/AboutMe")}>AboutMe</div>
         <div onClick={() => handleClick("/Experience")}>Experience</div>
+        <div onClick={() => handleClick("/Education")}>Education</div>
         <div onClick={() => handleClick("/Project")}>Project</div>
         <div onClick={() => handleClick("/Contact")}>Contact</div>
       </nav>

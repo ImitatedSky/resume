@@ -8,7 +8,9 @@ import Home from "./components/Home/Home";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
 import Experience from "./components/Experience/Experience";
+import Education from "./components/Education/Education";
 import Project from "./components/Project/Project";
+
 import Nopage from "./components/Nopage/Nopage";
 
 export default function App() {
@@ -24,6 +26,9 @@ export default function App() {
         </Route>
         <Route path="/Experience">
           <Experience />
+        </Route>
+        <Route path="/Education">
+          <Education />
         </Route>
         <Route path="/Project">
           <Project />
