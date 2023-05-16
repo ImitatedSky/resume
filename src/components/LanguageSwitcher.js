@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import LanguageContext from './LanguageContext';
+import React, { useContext } from "react";
+import LanguageContext from "./LanguageContext";
 
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useContext(LanguageContext);
@@ -8,11 +8,18 @@ const LanguageSwitcher = () => {
     setLanguage(event.target.value);
   };
 
+  const options = [
+    { value: "en", label: "English" },
+    { value: "zh", label: "中文" },
+  ];
+
   return (
-    <select value={language} onChange={handleLanguageChange}>
-      <option value="en">English</option>
-      <option value="zh">中文</option>
-    </select>
+    <>
+      <select value={language} onChange={handleLanguageChange}>
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+      </select>
+    </>
   );
 };
 
