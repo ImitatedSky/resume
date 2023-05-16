@@ -1,38 +1,35 @@
-export const Education = [
+export const Education_zh = [
   {
-    zh: {
-      school: "清華大學",
-      Date: { start: "2022-05", end: "now" },
-      Department: "科技管理",
-    },
-    en: {
-      school: "National Tsing Hua University",
-      Date: { start: "2022-05", end: "now" },
-      Department: "College of Technology Management",
-    },
+    school: "清華大學",
+    Date: { start: "2022-05", end: "2023-06" },
+    Department: "科技管理",
   },
   {
-    zh: {
-      school: "師範大學",
-      Date: { start: "2018-12", end: "2019-11" },
-      Department: "數學系",
-    },
-    en: {
-      school: "National Taiwan Normal University",
-      Date: { start: "2018-12", end: "2019-11" },
-      Department: "Department of Mathematics",
-    },
+    school: "師範大學",
+    Date: { start: "2018-12", end: "2019-11" },
+    Department: "數學系",
   },
   {
-    zh: {
-      school: "成功高中",
-      Date: { start: "2018-07", end: "2018-08" },
-      Department: "",
-    },
-    en: {
-      school: "Cheng-Kung Senior High School",
-      Date: { start: "2018-07", end: "2018-08" },
-      Department: "",
-    },
+    school: "成功高中",
+    Date: { start: "2018-07", end: "2018-08" },
+    Department: "",
+  },
+];
+
+export const Education_en = [
+  {
+    school: "National Tsing Hua University",
+    Date: { start: "2022-05", end: "2023-06" },
+    Department: "College of Technology Management",
+  },
+  {
+    school: "National Taiwan Normal University",
+    Date: { start: "2018-12", end: "2019-11" },
+    Department: "Department of Mathematics",
+  },
+  {
+    school: "Cheng-Kung Senior High School",
+    Date: { start: "2018-07", end: "2018-08" },
+    Department: "",
   },
 ];

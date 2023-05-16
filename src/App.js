@@ -1,5 +1,11 @@
 import "./styles.css";
-import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  NavLink,
+  useHistory,
+} from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Header from "./components/header";
@@ -22,16 +28,19 @@ import zh from "./languages/zh.json";
 
 export default function App() {
   const [language, setLanguage] = useState("en");
-  const languages = {
-    en: en,
-    zh: zh,
+  const [onepage, setOnepage] = useState(false);
+  let history = useHistory();
+  const toggleSwitchPage = () => {
+    setOnepage(!onepage);
+    onepage ? history.push("Nopage") : history.push("/");
   };
 
   return (
     <>
       <LanguageContext.Provider value={{ language, setLanguage }}>
+        {/* <Switch>
+          <Route exact path="/"> */}
         <Header />
-        <LanguageSwitcher />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -52,6 +61,12 @@ export default function App() {
             <Contact />
           </Route>
         </Switch>
+        {/* </Route>
+          <Route exact path="/Nopage">
+            <Nopage />
+          </Route>
+        </Switch> */}
+        <button onClick={toggleSwitchPage}>Switch</button>
         <Footer />
       </LanguageContext.Provider>
     </>

@@ -19,7 +19,7 @@ export default function AboutMe() {
       <LanguageContext.Consumer>
         {(vvvvssss) => (
           <div>
-            {/* 根据当前语言改变文本 */}
+            {/* 根據當前語言改變文本 */}
             {languages[vvvvssss.language].welcomeMessage}
           </div>
         )}

@@ -64,6 +64,7 @@ export default function Header() {
         <div onClick={() => handleClick("/Education")}>Education</div>
         <div onClick={() => handleClick("/Project")}>Project</div>
         <div onClick={() => handleClick("/Contact")}>Contact</div>
+        <LanguageSwitcher />
       </nav>
     </>
   );
