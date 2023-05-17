@@ -23,8 +23,6 @@ import Nopage from "./components/Nopage/Nopage";
 import LanguageContext from "./components/LanguageContext";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
-import en from "./languages/en.json";
-import zh from "./languages/zh.json";
 
 export default function App() {
   const [language, setLanguage] = useState("en");
@@ -67,6 +65,7 @@ export default function App() {
           </Route>
         </Switch> */}
         <button onClick={toggleSwitchPage}>Switch</button>
+        <Nopage />
         <Footer />
       </LanguageContext.Provider>
     </>
