@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <div>My Resume</div>
+      <div>Home</div>
       <LanguageContext.Provider value={{ language, setLanguage }}>
         <LanguageSwitcher />
 

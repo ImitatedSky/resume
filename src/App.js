@@ -30,7 +30,7 @@ export default function App() {
   let history = useHistory();
   const toggleSwitchPage = () => {
     setOnepage(!onepage);
-    onepage ? history.push("Nopage") : history.push("/");
+    onepage ? history.push("Onepage") : history.push("/");
   };
 
   return (
@@ -60,8 +60,8 @@ export default function App() {
           </Route>
         </Switch>
         {/* </Route>
-          <Route exact path="/Nopage">
-            <Nopage />
+          <Route exact path="/Onepage">
+            <Onepage />
           </Route>
         </Switch> */}
         <button onClick={toggleSwitchPage}>Switch</button>
