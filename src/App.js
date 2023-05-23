@@ -17,12 +17,11 @@ import Contact from "./components/Contact/Contact";
 import Experience from "./components/Experience/Experience";
 import Education from "./components/Education/Education";
 import Project from "./components/Project/Project";
-
 import Nopage from "./components/Nopage/Nopage";
+import Onepage from "./components/Onepage";
 
 import LanguageContext from "./components/LanguageContext";
 import LanguageSwitcher from "./components/LanguageSwitcher";
-
 
 export default function App() {
   const [language, setLanguage] = useState("en");
@@ -58,12 +57,11 @@ export default function App() {
           <Route path="/Contact">
             <Contact />
           </Route>
-        </Switch>
-        {/* </Route>
           <Route exact path="/Onepage">
             <Onepage />
           </Route>
-        </Switch> */}
+        </Switch>
+
         <button onClick={toggleSwitchPage}>Switch</button>
         <Nopage />
         <Footer />
