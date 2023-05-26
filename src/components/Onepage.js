@@ -4,8 +4,20 @@ import React from "react";
 import LanguageContext from "./LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
+import styled from "styled-components";
+
+
 import en from "../languages/en.json";
 import zh from "../languages/zh.json";
+
+const Div = styled.div`
+  height: 25px;
+  width: 25px;
+  background-color: ${(props) => props.backgroundColor};
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 7px #ccc; /* 環形邊框 */
+`;
 
 export default function Onepage() {
   const [language, setLanguage] = useState("en");
