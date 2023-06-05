@@ -3,7 +3,7 @@ import { useState } from "react";
 const Project = () => {
   return (
     <>
-      <div></div>
+      <div>project</div>
     </>
   );
 };
