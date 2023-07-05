@@ -1,6 +1,6 @@
 import "./styles.css";
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Switch,
   NavLink,
@@ -39,27 +39,27 @@ export default function App() {
           <Route exact path="/"> */}
         <Header />
         <Switch>
-          <Route exact path="/">
+          <HashRouter exact path="/">
             <Home />
-          </Route>
-          <Route path="/AboutMe">
+          </HashRouter>
+          <HashRouter path="/AboutMe">
             <AboutMe />
-          </Route>
-          <Route path="/Experience">
+          </HashRouter>
+          <HashRouter path="/Experience">
             <Experience />
-          </Route>
-          <Route path="/Education">
+          </HashRouter>
+          <HashRouter path="/Education">
             <Education />
-          </Route>
-          <Route path="/Project">
+          </HashRouter>
+          <HashRouter path="/Project">
             <Project />
-          </Route>
-          <Route path="/Contact">
+          </HashRouter>
+          <HashRouter path="/Contact">
             <Contact />
-          </Route>
-          <Route exact path="/Onepage">
+          </HashRouter>
+          <HashRouter exact path="/Onepage">
             <Onepage />
-          </Route>
+          </HashRouter>
         </Switch>
 
         <button onClick={toggleSwitchPage}>Switch</button>
