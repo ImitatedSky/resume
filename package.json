@@ -4,8 +4,9 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "homepage": "https://ImitatedSky.github.io/rusume",
+  "homepage": "https://ImitatedSky.github.io/resume",
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "bootstrap": "^5.2.3",
     "loader-utils": "3.2.1",
     "react": "18.2.0",
@@ -17,7 +18,6 @@
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
-    "gh-pages": "^5.0.0",
     "typescript": "4.1.3"
   },
   "scripts": {
