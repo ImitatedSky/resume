@@ -16,7 +16,7 @@ export default function Contact() {
       <Row>
         <Col xs={2} lg={1}>
           <img
-            src={obj.icon}
+            src={`${process.env.PUBLIC_URL}/${obj.icon}`}
             alt={obj.icon}
             style={{
               width: "25px",
