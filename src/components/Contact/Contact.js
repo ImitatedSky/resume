@@ -47,7 +47,6 @@ export default function Contact() {
       <div className="contact">
         {Links.ReferenceLinks.map((x) => renderAboutFromObj(x))}
       </div>
-      <img src="/104.png" />
     </>
   );
 }
