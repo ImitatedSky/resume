@@ -16,13 +16,28 @@ export default function Home() {
 
   return (
     <>
-      <div>Home</div>
+      <h1>Home</h1>
+      <LanguageContext.Consumer>
+        {(vvvvssss) => (
+          <div>
+            {/* 根據當前語言改變文本 */}
+            {languages[vvvvssss.language].web_construction}
+          </div>
+        )}
+      </LanguageContext.Consumer>
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
       <LanguageContext.Provider value={{ language, setLanguage }}>
         <LanguageSwitcher />
 
         <div>
           {/* 根據當前語言改變文本 */}
           {languages[language].welcomeMessage}
+          {/* {languages[language].web_construction} */}
         </div>
       </LanguageContext.Provider>
     </>
